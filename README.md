@@ -442,7 +442,6 @@ npm run dev
 | 크로스 도메인 쿠키 미전송 | Vercel(프론트)과 EC2(백엔드) 도메인 불일치 | `sameSite: 'none'` + `secure: true` 설정 |
 | 소셜 로그인 URL 토큰 노출 | 기존 리다이렉트 방식이 URL에 토큰 포함 | 쿠키 기반으로 전환, URL에 토큰 미노출 |
 | Docker 빌드 시 `dist/main.js` 미발견 | NestJS `rootDir` 미설정으로 `dist/src/main.js`에 출력 | `start:prod`를 `node dist/src/main`으로 수정 |
-| EC2에서 `.env` 따옴표 문제 | `docker --env-file`이 따옴표를 값으로 인식 | `.env` 파일에서 따옴표 제거 |
 | Helmet HSTS로 HTTP Swagger 차단 | Helmet이 HTTPS 강제 헤더 추가 | `hsts: false` 설정으로 HTTP 환경 대응 |
 | 카카오 이메일 미제공 | 개인 개발자 이메일 권한 없음 | providerId로 유저 식별 |
 | passport-kakao 타입 에러 | @types 미제공 | require + 직접 타입 정의 |
